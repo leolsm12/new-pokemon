@@ -25,9 +25,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/navbar/navbar.component.css",
+              "src/app/pokemon-details/pokemon-details.component.css",
+              "src/app/pokemon-list/pokemon-list.component.css",
+              "src/app/css/colorTypes.css"
             ],
-            "scripts": []
+            "scripts": [
+              
+            ]
           },
           "configurations": {
             "production": {

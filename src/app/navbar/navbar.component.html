@@ -1,0 +1,13 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand"[routerLink]="['/pokemon-list']">Pokémon</a>
+  <div class="form-inline search">
+    <input class="form-control mr-sm-2" [(ngModel)]="searchTerm" (keyup.enter)="search()" (input)="filterPokemonNames()" type="search" placeholder="Pesquisar" aria-label="Pesquisar" >
+    <button class="btn btn-outline-info my-2 my-sm-0" (click)="search()" type="submit">Pesquisar</button>
+  </div>
+</nav>
+<div class="suggestion-names shadow-sm p-3 mb-5  mr-sm-2" *ngIf="searchTerm && filteredPokemonNames.length !== 0 ">
+  <ul>
+    <li *ngFor="let name of filteredPokemonNames" (click)="selectPokemonName(name)"(click)="search()">
+      {{ name.replaceAll('-',' ') }}</li>
+  </ul>
+</div>

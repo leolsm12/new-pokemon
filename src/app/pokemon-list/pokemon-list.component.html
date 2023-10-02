@@ -1,0 +1,12 @@
+<button (click)="previus()" *ngIf="offsetValue > 0" type="button" class="btn btn-danger previus"><<<</button>
+<div class="pokemon-list row mx-auto">
+  <div class=" {{ pokemon.types[0] }} card col-md-2 " *ngFor="let pokemon of pokemonList" >
+    <a class="" [routerLink]="['/pokemon-details', pokemon.id]">
+      <img class="card-img-top" [src]="pokemon.image" alt="{{ pokemon.name }}">
+      <div class="card-body">
+        <p>{{ pokemon.name }}</p><p>#{{ ('0000' + pokemon.id).slice(-4) }}</p>
+      </div>
+    </a>
+  </div>
+</div>
+<button (click)="next()" type="button" class="btn btn-dark next">>>></button>

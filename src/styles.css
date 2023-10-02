@@ -1,0 +1,7 @@
+html, body {
+    height: 100%;
+    margin: 0; /* Remove margens padrão para evitar espaços extras */
+    padding: 0; /* Remove preenchimento padrão para evitar espaços extras */
+    background-color: rgb(172, 170, 170);
+    
+}

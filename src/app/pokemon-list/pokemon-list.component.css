@@ -1,0 +1,68 @@
+.pokemon-list {
+    width: 80%;
+}
+
+.card {
+    width: 6rem;
+    background-position: center;
+    margin: 17.8px;
+    border: solid 1px black;
+}
+.card-body {
+    position: relative;
+    padding: 0;
+    width: 121%;
+    left: -1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.next {
+    position: fixed;
+    right: 0;
+    top: 15%;
+    height: 80%;
+}
+
+.previus {
+    position: fixed;
+    left: 0;
+    top: 15%;
+    height: 80%; 
+}
+
+@media (max-width: 500px) {
+    .next {
+        position: absolute;
+        width: 50%;
+        right: 0;
+        height: auto;
+        top: 9rem;
+    }
+
+    .previus {
+        position: absolute;
+        width: 50%;
+        left: 0;
+        height: auto;
+        top: 9rem;
+    }
+
+    .pokemon-list {
+        position: relative;
+        top: 2rem;
+    }
+
+    .card {
+        width: 8rem;
+    }
+
+    .card-body {
+        width: 133%;
+    }
+}

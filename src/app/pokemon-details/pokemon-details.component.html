@@ -1,0 +1,24 @@
+<button *ngIf="pokemonId >= 2" type="button" class="btn btn-danger previus"(click)="previus()">#{{ ('0000' + (pokemon.id-1)).slice(-4)}}</button>
+<div *ngIf="pokemon" class="mx-auto detail" >
+  <h2 class="pokemon-name">{{ pokemon.name.replaceAll('-', ' ') }}</h2>
+  <div class="description">
+    <p class="description-id">#{{ ('0000' + pokemon.id).slice(-4) }}</p>
+    <p class="description-name {{ pokemon.types[0] }}">{{ pokemon.types[0] }}</p>
+    <p class="description-name {{ pokemon.types[1] }}">{{ pokemon.types[1] }}</p>
+  </div>
+  <div class="card {{ pokemon.types[0] }}">
+    <img class="card-img-top" [src]="pokemon.image" alt="{{ pokemon.name }}">
+  </div>
+  <table class="stats shadow p-3 mb-5 bg-black rounded " >
+    <h2>stats</h2>
+    <tr *ngFor="let stat of pokemon.stats_name; let i = index">
+      <td class="name-progress">{{ stat.replaceAll('-', ' ') }}</td>
+      <td>
+        <div class="progress">
+          <div class="progress-bar {{ pokemon.types[0] }} " role="progressbar" [ngStyle]="{'width.%': pokemon.stats_value[i]}" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">{{ pokemon.stats_value[i] }}</div>
+        </div>
+        </td>
+    </tr>
+  </table>
+</div>
+<button type="button" class="btn btn-dark next" (click)="next()">#{{ ('0000' + (pokemon.id+1)).slice(-4)}}</button>

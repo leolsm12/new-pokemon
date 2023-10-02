@@ -1,0 +1,48 @@
+.suggestion-names {
+    position: absolute;
+    width: 13rem;
+    right: 8%;
+    max-height: 10rem;
+    overflow: auto;
+    z-index: 1;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    border-radius: 10px;
+    background-color: rgb(255, 254, 254);
+    
+}
+
+.suggestion-names::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+  }
+
+ul {
+    padding: 0;
+    position: relative;
+    top: -1rem;
+    margin-bottom: -25px;
+}
+li {
+    list-style: none;
+    text-align: center;
+    font-weight: 490;
+    width: 100%;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: rgb(173, 171, 171);
+}
+
+
+@media (max-width: 500px) {
+    .suggestion-names {
+        top: 6rem;
+        left: 1rem;
+    } 
+    li {
+        font-size: 1.4rem;
+    }
+}
